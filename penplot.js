@@ -72,7 +72,7 @@ window.onload = function () {
   function drawEdges(_input, _minVal, _maxVal) {
     cannyOutput = new cv.Mat();
     cv.cvtColor(_input, _input, cv.COLOR_RGBA2GRAY);
-    cv.equalizeHist(_input, _input);
+    // cv.equalizeHist(_input, _input);
     // cv.imshow(c, _input)
     cv.Canny(_input, cannyOutput, _minVal, _maxVal, 3, false);
     return cannyOutput;
